@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def storage_information_view(request):
-    # Программируем здесь
+
     def format_duration(seconds):
         formated_duration = f"{seconds // 3600} h {(seconds % 3600) // 60} min"
         return formated_duration
