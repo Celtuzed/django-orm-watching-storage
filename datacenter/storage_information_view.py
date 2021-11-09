@@ -5,15 +5,11 @@ from django.shortcuts import render
 
 def storage_information_view(request):
 
-    def format_duration(seconds):
-        formated_duration = f"{seconds // 3600} h {(seconds % 3600) // 60} min"
-        return formated_duration
-
-
     non_closed_visits = []
     visits = Visit.objects.filter(leaved_at=None)
     for visit in visits:
         seconds = visit.get_duration().total_seconds()
+        formated_duration = f"{seconds // 3600} h {(seconds % 3600) // 60} min"
         non_closed_visits.append(
             {
                     'who_entered': visit.passcard,
