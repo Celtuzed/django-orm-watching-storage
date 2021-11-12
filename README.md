@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 После установки зависимостей нужно запустить `main.py` в консоли
 ```
-Python main.py
+python main.py
 ```
 ### Цель проекта
 
