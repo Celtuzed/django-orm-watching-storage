@@ -14,7 +14,7 @@ def storage_information_view(request):
             {
                     'who_entered': visit.passcard,
                     'entered_at': visit.entered_at,
-                    'duration': format_duration(seconds)
+                    'duration': formated_duration
             }
         )
 
